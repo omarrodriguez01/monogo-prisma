@@ -16,6 +16,7 @@ export class TeamsService {
     });
   }
 
-  // async findById(id: string): Promise<Team | null> {
-  // }
+  async findById(id: string): Promise<Team | null> {
+    return null;
+  }
 }
