@@ -18,7 +18,7 @@ export class StudentsController {
     }
 
     @Get(':id')
-    findById(@Param('id') id: string): Promise<Student | null> {
+    find(@Param('id') id: string): Promise<Student | null> {
       return this.studentsService.findById(id);
     }
   

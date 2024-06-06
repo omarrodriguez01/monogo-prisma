@@ -17,6 +17,11 @@ export class TeamsService {
   }
 
   async findById(id: string): Promise<Team | null> {
-    return null;
+    return this.prisma.team.findUnique({
+      where: { id },
+      include: {
+        students: true,
+      },
+    });
   }
 }
