@@ -16,8 +16,8 @@ export class TeamsController {
     return this.teamsService.create({ name });
   }
 
-  // @Get(':id')
-  // async findById(@Param('id') id: string): Promise<Team> {
-  //   return this.teamsService.findById(id);
-  // }
+  @Get(':id')
+  async findById(@Param('id') id: string): Promise<Team> {
+    return this.teamsService.findById(id);
+  }
 }
