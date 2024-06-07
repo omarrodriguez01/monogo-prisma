@@ -16,4 +16,13 @@ generator client {
 model Team {
   id   String @id @default(auto()) @map("_id") @db.ObjectId
   name String
+  students Student[]
+}
+
+model Student {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  generation Int
+  teamId     String
+  team       Team     @relation(fields: [teamId], references: [id])
 }
